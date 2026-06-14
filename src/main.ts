@@ -25,7 +25,7 @@ function animateCurrentSlide() {
   if (reduceMotion) return;
 
   const slide = deck.getCurrentSlide();
-  const targets = slide.querySelectorAll('h1, h2, .kicker, .lead, .cms-card, .social-icon, .manual-stack article, .scale-bento div, .launch-timeline div, .draft-stack article, .demo-board div, .layer-visual, .tool-rail span, .skills-list li, .closing-layout p');
+  const targets = slide.querySelectorAll('h1, h2, .kicker, .lead, .launch-panel, .cms-card, .social-icon, .manual-stack article, .scale-bento div, .launch-timeline div, .draft-stack article, .demo-board div, .layer-visual, .tool-rail span, .skills-list li, .closing-layout p');
 
   animate(targets, {
     opacity: [0, 1],
