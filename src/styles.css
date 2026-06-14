@@ -643,8 +643,28 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .sidecar-layout {
+    gap: 24px;
+  }
+
   .layer-visual {
-    display: none;
+    height: 240px;
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .base-layer {
+    inset: 56px 8px 16px;
+    padding: 18px;
+    border-radius: 24px;
+    font-size: clamp(20px, 5vw, 26px);
+  }
+
+  .top-layer {
+    inset: 12px 36px 72px;
+    padding: 18px;
+    border-radius: 24px;
+    font-size: clamp(20px, 5vw, 26px);
   }
 
   .manual-stack article,
