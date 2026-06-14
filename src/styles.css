@@ -27,6 +27,12 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.reveal-viewport,
+.reveal .backgrounds,
+.reveal .slide-background {
+  background: var(--paper);
+}
+
 .reveal {
   width: 100%;
   height: 100%;
@@ -342,18 +348,6 @@ body {
   transform: translateY(-50%);
 }
 
-.launch-timeline::after {
-  content: "";
-  position: absolute;
-  left: 6%;
-  top: 50%;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background: var(--blue);
-  box-shadow: 0 0 0 8px rgba(5, 178, 252, 0.18);
-  transform: translate(-50%, -50%);
-}
 
 .launch-timeline div {
   position: relative;
@@ -608,9 +602,14 @@ body {
     animation-delay: -2.2s;
   }
 
-  .launch-timeline::after {
-    animation: timeline-run 4.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  .launch-timeline div {
+    animation: timeline-highlight 18s ease-in-out infinite;
   }
+
+  .launch-timeline div:nth-child(2) { animation-delay: 3.6s; }
+  .launch-timeline div:nth-child(3) { animation-delay: 7.2s; }
+  .launch-timeline div:nth-child(4) { animation-delay: 10.8s; }
+  .launch-timeline div:nth-child(5) { animation-delay: 14.4s; }
 }
 
 @keyframes orbit-breathe {
@@ -618,9 +617,13 @@ body {
   50% { translate: 0 -10px; }
 }
 
-@keyframes timeline-run {
-  0% { left: 6%; }
-  100% { left: 94%; }
+@keyframes timeline-highlight {
+  0%, 14%, 100% {
+    box-shadow: inset 0 0 0 1px var(--line);
+  }
+  5%, 9% {
+    box-shadow: inset 0 0 0 3px var(--blue), 0 18px 45px rgba(5, 178, 252, 0.18);
+  }
 }
 
 @media (max-width: 900px) {
