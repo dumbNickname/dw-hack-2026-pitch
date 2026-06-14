@@ -10,7 +10,7 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "gsap": "^3.15.0",
+    "animejs": "^4.4.1",
     "reveal.js": "latest"
   },
   "devDependencies": {
